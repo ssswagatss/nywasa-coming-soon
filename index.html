@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+       SEO META TAGS
+       ============================================================ -->
+  <title>NYWASA — Premium Personalized Gifts | Coming Soon</title>
+  <meta name="description" content="NYWASA crafts premium personalized gifts designed to leave a lasting impression. Something thoughtful is arriving. Be first to know." />
+  <meta name="keywords" content="luxury gifts, personalized gifts, premium gifting, bespoke gifts, NYWASA" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://nywasa.com" />
+
+  <!-- ============================================================
+       OPEN GRAPH / SOCIAL SHARING TAGS
+       ============================================================ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="NYWASA — Something Thoughtful Is Arriving" />
+  <meta property="og:description" content="Premium personalized gifts designed to leave a lasting impression." />
+  <!-- REPLACE: Update this URL with your actual hosted OG image (1200x630px recommended) -->
+  <meta property="og:image" content="https://nywasa.com/og-image.jpg" />
+  <meta property="og:url" content="https://nywasa.com" />
+  <meta property="og:site_name" content="NYWASA" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NYWASA — Something Thoughtful Is Arriving" />
+  <meta name="twitter:description" content="Premium personalized gifts designed to leave a lasting impression." />
+  <!-- REPLACE: Same OG image URL here -->
+  <meta name="twitter:image" content="https://nywasa.com/og-image.jpg" />
+
+  <!-- ============================================================
+       FAVICON PLACEHOLDER
+       Replace href values with your actual favicon files.
+       Generate favicons at: https://realfavicongenerator.net
+       ============================================================ -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+  <!-- ============================================================
+       FONTS
+       Using Cormorant Garamond (display) + Jost (body) for
+       a distinctly luxury editorial pairing.
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       AMBIENT GRAIN OVERLAY (pure CSS noise texture for luxury feel)
+       ============================================================ -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       HERO SECTION
+       REPLACE: Change the CSS background-image in style.css
+       inside the .hero selector to your actual background image.
+       ============================================================ -->
+  <section class="hero" aria-label="Coming soon hero section">
+
+    <!-- Layered background overlays for depth -->
+    <div class="hero__overlay hero__overlay--radial" aria-hidden="true"></div>
+    <div class="hero__overlay hero__overlay--bottom" aria-hidden="true"></div>
+    <div class="hero__overlay hero__overlay--top" aria-hidden="true"></div>
+
+    <!-- Floating decorative orbs -->
+    <div class="orb orb--1" aria-hidden="true"></div>
+    <div class="orb orb--2" aria-hidden="true"></div>
+
+    <div class="hero__content">
+
+      <!-- Logo / Brand Name -->
+      <header class="brand" role="banner">
+        <div class="brand__mark" aria-hidden="true">
+          <span class="brand__mark-line"></span>
+          <span class="brand__diamond"></span>
+          <span class="brand__mark-line"></span>
+        </div>
+        <h1 class="brand__name">NYWASA</h1>
+        <p class="brand__tagline">The Art of Gifting</p>
+      </header>
+
+      <!-- Hero Headline -->
+      <div class="headline-block">
+        <div class="headline-block__eyebrow" aria-hidden="true">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Something is coming</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2 class="headline-block__title">
+          Something<br />
+          <em>Thoughtful</em><br />
+          Is Arriving
+        </h2>
+        <p class="headline-block__sub">
+          Premium personalized gifts designed to leave&nbsp;a&nbsp;lasting&nbsp;impression.
+        </p>
+      </div>
+
+      <!-- ============================================================
+           COUNTDOWN TIMER
+           REPLACE: Change the LAUNCH_DATE value in script.js
+           to your actual launch date (format: 'YYYY-MM-DDTHH:MM:SS')
+           ============================================================ -->
+      <div
+        class="countdown"
+        role="timer"
+        aria-label="Countdown to launch"
+        aria-live="polite"
+      >
+        <div class="countdown__card" aria-label="Days remaining">
+          <div class="countdown__number" id="days">00</div>
+          <div class="countdown__label">Days</div>
+          <div class="countdown__card-glow" aria-hidden="true"></div>
+        </div>
+        <div class="countdown__separator" aria-hidden="true">:</div>
+        <div class="countdown__card" aria-label="Hours remaining">
+          <div class="countdown__number" id="hours">00</div>
+          <div class="countdown__label">Hours</div>
+          <div class="countdown__card-glow" aria-hidden="true"></div>
+        </div>
+        <div class="countdown__separator" aria-hidden="true">:</div>
+        <div class="countdown__card" aria-label="Minutes remaining">
+          <div class="countdown__number" id="minutes">00</div>
+          <div class="countdown__label">Minutes</div>
+          <div class="countdown__card-glow" aria-hidden="true"></div>
+        </div>
+        <div class="countdown__separator" aria-hidden="true">:</div>
+        <div class="countdown__card" aria-label="Seconds remaining">
+          <div class="countdown__number" id="seconds">00</div>
+          <div class="countdown__label">Seconds</div>
+          <div class="countdown__card-glow" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           EMAIL CAPTURE FORM
+           REPLACE: See script.js for email submission handling.
+           Options documented there:
+             1. GitHub Pages static form via Formspree (free)
+             2. EmailJS (free tier)
+             3. Netlify Forms (if hosting on Netlify)
+           ============================================================ -->
+      <div class="email-section">
+        <p class="email-section__invite">
+          Be among the first to experience NYWASA.
+        </p>
+
+        <div
+          class="email-form"
+          role="form"
+          aria-label="Early access email signup"
+          id="emailForm"
+        >
+          <div class="email-form__row">
+            <label for="emailInput" class="visually-hidden">
+              Your email address
+            </label>
+            <input
+              type="email"
+              id="emailInput"
+              class="email-form__input"
+              placeholder="Your email address"
+              autocomplete="email"
+              aria-required="true"
+              aria-describedby="emailError emailSuccess"
+              required
+            />
+            <button
+              type="button"
+              class="email-form__btn"
+              id="submitBtn"
+              aria-label="Join the early access list"
+              onclick="handleEmailSubmit()"
+            >
+              <span class="btn-text">Notify Me</span>
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </button>
+          </div>
+          <p
+            class="email-form__error"
+            id="emailError"
+            role="alert"
+            aria-live="assertive"
+          ></p>
+          <div
+            class="email-form__success"
+            id="emailSuccess"
+            role="status"
+            aria-live="polite"
+            style="display:none"
+          >
+            <span class="success-icon" aria-hidden="true">✦</span>
+            <span>You're on the list. We'll be in touch.</span>
+          </div>
+        </div>
+
+        <p class="email-section__privacy">
+          No spam. Unsubscribe anytime. We respect your privacy.
+        </p>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider" aria-hidden="true">
+        <span class="divider__line"></span>
+        <span class="divider__ornament">✦</span>
+        <span class="divider__line"></span>
+      </div>
+
+      <!-- ============================================================
+           SOCIAL LINKS
+           REPLACE: Update each href with your actual social media URLs
+           ============================================================ -->
+      <nav class="social" aria-label="Social media links">
+        <p class="social__label">Follow Our Journey</p>
+        <div class="social__links">
+
+          <!-- Instagram -->
+          <a
+            href="https://instagram.com/nywasa"
+            class="social__link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow NYWASA on Instagram"
+          >
+            <div class="social__icon-wrap">
+              <svg class="social__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+              </svg>
+            </div>
+            <span class="social__name">Instagram</span>
+          </a>
+
+          <!-- TikTok -->
+          <a
+            href="https://tiktok.com/@nywasa"
+            class="social__link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow NYWASA on TikTok"
+          >
+            <div class="social__icon-wrap">
+              <svg class="social__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="social__name">TikTok</span>
+          </a>
+
+          <!-- Pinterest -->
+          <a
+            href="https://pinterest.com/nywasa"
+            class="social__link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow NYWASA on Pinterest"
+          >
+            <div class="social__icon-wrap">
+              <svg class="social__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.853 0 1.267.641 1.267 1.408 0 .858-.546 2.140-.828 3.330-.236.995.498 1.806 1.476 1.806 1.771 0 3.135-1.866 3.135-4.560 0-2.385-1.713-4.052-4.159-4.052-2.833 0-4.495 2.124-4.495 4.320 0 .855.329 1.771.740 2.271a.3.3 0 0 1 .069.284c-.075.314-.243.995-.276 1.134-.044.181-.146.220-.337.133-1.249-.581-2.030-2.407-2.030-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.220-5.190 6.220-1.013 0-1.966-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.290 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+              </svg>
+            </div>
+            <span class="social__name">Pinterest</span>
+          </a>
+
+          <!-- Facebook -->
+          <a
+            href="https://facebook.com/nywasa"
+            class="social__link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow NYWASA on Facebook"
+          >
+            <div class="social__icon-wrap">
+              <svg class="social__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="social__name">Facebook</span>
+          </a>
+
+        </div>
+      </nav>
+
+    </div><!-- /.hero__content -->
+
+    <!-- Footer inside hero -->
+    <footer class="hero__footer" role="contentinfo">
+      <p>© <span id="currentYear"></span> NYWASA. All rights reserved.</p>
+      <p class="hero__footer-sub">Crafted with intention.</p>
+    </footer>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
