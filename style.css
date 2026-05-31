@@ -155,7 +155,7 @@ input {
   justify-content: center;
 
   /* REPLACE: Swap this URL with your background image URL or local path */
-  background-image: url('../nywasa-coming-soon/BG.png');
+  background-image: url('BG.png');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
