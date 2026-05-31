@@ -349,7 +349,7 @@ input {
 
 /* The italic "Thoughtful" word */
 .headline-block__title em {
-  font-style: italic;
+  font-style: bold;
   color: var(--color-gold);
   display: inline-block;
   font-weight: 300;
