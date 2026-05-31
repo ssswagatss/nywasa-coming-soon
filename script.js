@@ -20,7 +20,7 @@
    Format:  'YYYY-MM-DDTHH:MM:SS'
    Example: '2025-12-25T00:00:00' = Christmas Day 2025 midnight
    ================================================================ */
-const LAUNCH_DATE = new Date('2026-01-15T00:00:00').getTime();
+const LAUNCH_DATE = new Date('2026-06-19T00:00:00').getTime();
 
 
 /* ================================================================

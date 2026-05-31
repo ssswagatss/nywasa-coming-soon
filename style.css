@@ -155,7 +155,7 @@ input {
   justify-content: center;
 
   /* REPLACE: Swap this URL with your background image URL or local path */
-  background-image: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=1800&q=80&auto=format&fit=crop');
+  background-image: url('../nywasa-coming-soon/BG.png');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -361,7 +361,7 @@ input {
   font-weight: 300;
   color: var(--color-text-sub);
   letter-spacing: 0.04em;
-  max-width: 44ch;
+  max-width: 46ch;
   line-height: 1.75;
 }
 
