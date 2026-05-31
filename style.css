@@ -345,14 +345,28 @@ input {
   line-height: 1.05;
   color: var(--color-text);
   letter-spacing: -0.01em;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.55);
 }
 
-/* The italic "Thoughtful" word */
+/* The italic gold accent word ("Moments") */
 .headline-block__title em {
-  font-style: bold;
-  color: var(--color-gold);
+  font-style: italic;
   display: inline-block;
-  font-weight: 300;
+  font-weight: 400;
+  background: linear-gradient(
+    100deg,
+    var(--color-gold) 0%,
+    var(--color-gold-light) 45%,
+    #F0D9A8 55%,
+    var(--color-gold) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--color-gold); /* fallback */
+  filter: drop-shadow(0 4px 18px rgba(201, 166, 107, 0.28));
+  animation: shimmer 6s linear infinite;
 }
 
 .headline-block__sub {
@@ -385,19 +399,47 @@ input {
   width: clamp(70px, 16vw, 110px);
   height: clamp(80px, 18vw, 120px);
   padding: var(--space-sm) var(--space-xs);
-  background: var(--color-glass);
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.015) 45%, rgba(0, 0, 0, 0.12) 100%);
   border: 1px solid var(--color-glass-border);
-  border-radius: var(--radius-md);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 0 24px rgba(0, 0, 0, 0.25),
+    0 12px 32px rgba(0, 0, 0, 0.35);
   overflow: hidden;
   transition: transform var(--duration-fast) var(--ease-smooth),
-              border-color var(--duration-fast) var(--ease-smooth);
+              border-color var(--duration-fast) var(--ease-smooth),
+              box-shadow var(--duration-fast) var(--ease-smooth);
+}
+
+/* Thin gold accent highlight along the top edge */
+.countdown__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-gold), transparent);
+  opacity: 0.5;
+  transition: opacity var(--duration-fast) var(--ease-smooth);
 }
 
 .countdown__card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(201,166,107,0.38);
+  transform: translateY(-4px);
+  border-color: rgba(201,166,107,0.45);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 24px rgba(0, 0, 0, 0.2),
+    0 18px 40px rgba(0, 0, 0, 0.45),
+    0 0 24px rgba(201, 166, 107, 0.12);
+}
+
+.countdown__card:hover::before {
+  opacity: 0.9;
 }
 
 .countdown__card-glow {
@@ -414,12 +456,17 @@ input {
 }
 
 .countdown__number {
+  position: relative;
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 5.5vw, 3rem);
   font-weight: 400;
   line-height: 1;
-  color: var(--color-text);
   letter-spacing: -0.02em;
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--color-text) 55%, rgba(223, 192, 138, 0.85) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--color-text); /* fallback */
   /* Flip animation applied via JS class */
   transition: opacity 200ms ease;
 }
@@ -559,13 +606,28 @@ input {
 .email-form__btn::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 60%);
+  top: 0;
+  bottom: 0;
+  left: -60%;
+  width: 50%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
   opacity: 0;
-  transition: opacity var(--duration-fast) ease;
 }
 
-.email-form__btn:hover::before { opacity: 1; }
+.email-form__btn:hover::before {
+  animation: btn-gleam 0.85s var(--ease-smooth);
+}
+
+@keyframes btn-gleam {
+  0%   { left: -60%; opacity: 0.7; }
+  100% { left: 130%; opacity: 0; }
+}
 
 .email-form__btn:hover {
   box-shadow: 0 4px 20px rgba(201,166,107,0.32);
@@ -896,14 +958,6 @@ input {
   .email-form__row {
     max-width: 520px;
     margin: 0 auto;
-  }
-}
-
-/* ---- Large Desktop (1400px+) ---- */
-@media (min-width: 1400px) {
-  .hero {
-    background-image: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=2400&q=80&auto=format&fit=crop');
-    /* REPLACE: use a 2400px wide version for retina displays */
   }
 }
 
